@@ -1,0 +1,17 @@
+# # Build a series (array)
+# values = [1,3,4,5,6]
+# data_auto_i = pd.Series(values)
+
+# # Build a series (map)
+# data_manu_i = pd.Series(values, keys)
+
+# # Data Frame filled with random data
+# rows = np.array(['1', '2', '3'])
+# cols = np.array(['a', 'b', 'c', 'd', 'e'])
+# dataframe = pd.DataFrame(np.random.randint(1, 101, (len(rows), len(cols))), rows, cols)
+
+# # Grab first 5
+# data.head()
+
+# # Grab first 5 after 100
+# data.iloc[100:].head()
