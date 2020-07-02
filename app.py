@@ -8,9 +8,21 @@ tree_model = joblib.load('./notebooks/tree_model.pkl')
 
 @app.route('/')
 def index():
-    one = model.predict([[4, 2.5, 3005, 15, 17903.0, 1]])[0][0].round(1)
-    two = linear_model.predict([[4, 2.5, 3005, 15, 17903.0, 1]])[0][0].round(1)
-    three = 'abc' # tree_model.predict([[4, 2.5, 3005, 15, 17903.0, 1]])[0][0].round(1)
+    features = {
+        'beds': 4,
+        'baths': 2.5,
+        'sqft': 3005,
+        'age': 17,
+        'lotsize': 17903.0,
+        'garage': 1
+    }
+    values = [v for k,v in features.items()]
+    params = [values] # 2D array
+    one = model.predict(params)[0][0].round(1)
+    two = linear_model.predict(params)[0][0].round(1)
+    three = tree_model.predict(params)[0].round(1)
+    print(tree_model.predict(params), three)
+
     return render_template('index.html', predictions={ 
         'default': {
             'prediction': one,
