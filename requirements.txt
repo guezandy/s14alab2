@@ -11,3 +11,4 @@ virtualenv==14.0.1
 virtualenv-clone==0.2.6
 virtualenvwrapper==4.6.0
 Werkzeug==1.0.1
+joblib==0.14.1
