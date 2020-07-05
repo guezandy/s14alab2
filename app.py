@@ -32,7 +32,7 @@ def index():
         'linear': {
             'prediction': two,
             'name': 'Linear',
-            'description': 'This model implements LinearRegression and splits train/test 80/20',
+            'description': 'This model implements LinearRegression and splits train/test 66/33',
         },
         'decision_tree': {
             'prediction': three,
